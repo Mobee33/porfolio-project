@@ -328,22 +328,22 @@ section{
           }
 
           .html{
-            width: 80%;
+            width: 80%!important;
           }
           .css{
-            width: 95%;
+            width: 95%!important;
           }
           .js{
-            width: 75%;
+            width: 60%!important;
+          }
+          .ruby{
+            width: 75%!important;
+          }
+          .ror{
+            width: 85%!important;
           }
           .react{
-            width: 75%;
-          }
-          .node{
-            width: 87%;
-          }
-          .python{
-            width: 70%;
+            width: 50%!important;
           }
         }
       }
