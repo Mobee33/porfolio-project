@@ -1,36 +1,194 @@
-@media screen and (max-width: 600px){
-  header{
-    padding: 0;
-  }
-  header .right-header{
-    padding: 2rem !important;
+// Large screens (1432px)
+@media screen and (max-width: 1432px) {
+  section {
+    padding: 3rem 10rem;
   }
 
-  .theme-btn{
-    width: 50px;
-    height: 50px;
+  .right-header {
+    padding-right: 6rem;
   }
 
-  .header-content{
+  .portfolios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Medium screens (1200px)
+@media screen and (max-width: 1200px) {
+  section {
+    padding: 3rem 5rem;
+  }
+
+  .right-header {
+    padding-right: 3rem;
+  }
+
+  .header-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .left-header {
+    .image {
+      width: 80%;
+      margin-left: 2rem;
+    }
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    .left-about {
+      padding-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Tablet screens (992px)
+@media screen and (max-width: 992px) {
+  section {
+    padding: 2rem 3rem;
+  }
+
+  .header-content {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
-  }
 
-  .left-header{
-    .h-shape{
-      display: none;
+    .left-header {
+      padding: 0;
+      margin-bottom: 2rem;
+
+      .image {
+        width: 70%;
+        margin: 0 auto;
+        height: 70vh;
+      }
+    }
+
+    .right-header {
+      grid-row: 1;
+      width: 90%;
+      margin: 0 auto;
+      padding: 2rem 0;
+
+      .name {
+        font-size: 2.7rem;
+      }
     }
   }
 
-  .right-header{
-    grid-row: 1;
-    width: 90%;
-    margin: 0 auto;
-    .name{
-      font-size: 2.5rem;
+  .about-stats {
+    .progress-bars {
+      grid-template-columns: 1fr;
     }
   }
-  .controls{
+
+  .portfolios {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .contact-content-con {
+    flex-direction: column;
+
+    .right-contact {
+      margin-left: 0;
+      margin-top: 2.5rem;
+
+      .i-c-2 {
+        flex-direction: column;
+        :last-child {
+          margin-left: 0;
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+// Mobile screens (768px)
+@media screen and (max-width: 768px) {
+  section {
+    padding: 2rem 2.5rem;
+  }
+
+  .header-content {
+    .left-header {
+      .h-shape {
+        display: none;
+      }
+    }
+
+    .right-header {
+      .name {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .right-about {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolios {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    padding-left: 2rem;
+
+    .tl-icon {
+      left: -22px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .main-title {
+    h2 {
+      font-size: 3rem;
+
+      .bg-text {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+// Small mobile screens (600px)
+@media screen and (max-width: 600px) {
+  section {
+    padding: 2rem 1.5rem;
+  }
+
+  header {
+    padding: 0;
+  }
+
+  .theme-btn {
+    width: 50px;
+    height: 50px;
+    right: 5%;
+  }
+
+  .left-header {
+    .image {
+      width: 90%;
+      height: 60vh;
+    }
+  }
+
+  .right-header {
+    padding: 2rem 1rem;
+    .name {
+      font-size: 2rem;
+    }
+  }
+
+  .controls {
     top: auto;
     bottom: 0;
     flex-direction: row;
@@ -39,8 +197,105 @@
     transform: translateX(-50%);
     width: 100%;
     background-color: var(--color-grey-5);
-    .control{
-      margin: 1rem .3rem;
+    padding: 0.5rem 0;
+
+    .control {
+      margin: 0.5rem 0.5rem;
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  .about-stats {
+    .progress-bars {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolios {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-content-con {
+    flex-direction: column;
+  }
+
+  .i-c-2 {
+    flex-direction: column;
+    input {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .main-title {
+    h2 {
+      font-size: 2rem;
+
+      .bg-text {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+// Extra small screens (400px)
+@media screen and (max-width: 400px) {
+  .section {
+    padding: 1.5rem 1rem;
+  }
+
+  .left-header {
+    .image {
+      width: 95%;
+      height: 55vh;
+    }
+  }
+
+  .right-header {
+    padding: 1.5rem 0.8rem;
+    .name {
+      font-size: 1.8rem;
+    }
+  }
+
+  .controls {
+    .control {
+      width: 40px;
+      height: 40px;
+      margin: 0.3rem 0.3rem;
+
+      i {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .btn-con {
+    margin: 0.5rem 0;
+  }
+
+  .main-btn {
+    .btn-text {
+      padding: 0 1rem;
+      font-size: 0.9rem;
+    }
+
+    .btn-icon {
+      padding: 0.8rem;
+    }
+  }
+
+  .main-title {
+    h2 {
+      font-size: 1.8rem;
+
+      .bg-text {
+        font-size: 2.5rem;
+      }
     }
   }
 }
